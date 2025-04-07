@@ -715,6 +715,7 @@ static bool testDirectory(const std::string& dir, const std::string &envVar)
 /** Initialize for a simulation */
 void Micropolis::simInit()
 {
+    printf("simIni \n");
     setEnableSound(true); // Enable sound
     mustUpdateOptions = true; // Update options displayed at user
     scenario = SC_NONE;
@@ -743,6 +744,23 @@ void Micropolis::simInit()
     setGameLevelFunds(LEVEL_EASY);
     setSpeed(3);
     setPasses(1);
+
+   
+    printf("populationDensityMap MapByte2 %d %d \n", populationDensityMap.getBase(), populationDensityMap.getTotalByteSize());
+    printf("trafficDensityMap MapByte2 %d %d \n", trafficDensityMap.getBase(), trafficDensityMap.getTotalByteSize());
+    printf("pollutionDensityMap MapByte2 %d %d \n", pollutionDensityMap.getBase(), pollutionDensityMap.getTotalByteSize());
+    printf("landValueMap MapByte2 %d %d \n", landValueMap.getBase(), landValueMap.getTotalByteSize());
+    printf("crimeRateMap MapByte2 %d %d \n", crimeRateMap.getBase(), crimeRateMap.getTotalByteSize());
+    printf("terrainDensityMap MapByte4 %d %d \n", terrainDensityMap.getBase(), terrainDensityMap.getTotalByteSize());
+    printf("powerGridMap MapByte1 %d %d \n", powerGridMap.getBase(), powerGridMap.getTotalByteSize());
+    printf("rateOfGrowthMap MapShort8 %d %d \n", rateOfGrowthMap.getBase(), rateOfGrowthMap.getTotalByteSize());
+    printf("fireStationMap MapShort8 %d %d \n", fireStationMap.getBase(), fireStationMap.getTotalByteSize());
+    printf("fireStationEffectMap MapShort8 %d %d \n", fireStationEffectMap.getBase(), fireStationEffectMap.getTotalByteSize());
+    printf("policeStationMap MapShort8 %d %d \n", policeStationMap.getBase(), policeStationMap.getTotalByteSize());
+    printf("policeStationEffectMap MapShort8 %d %d \n", policeStationEffectMap.getBase(), policeStationEffectMap.getTotalByteSize());
+    printf("comRateMap MapShort8 %d %d \n", comRateMap.getBase(), comRateMap.getTotalByteSize());
+    printf("resHist MapShort8 %d \n", *resHist);
+    
 }
 
 
